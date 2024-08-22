@@ -12,7 +12,7 @@ function requestVideo(api,s,e) {
   .then(response  => response.json())
   .then(data => {
     for(i=s;i<=e;i++){
-      let video = direct(data[i].link)
+      let video = direct(data[i].link);
       let photo = data[i].image;
       let name = data[i].title;
       videoView = videoView + `<div class="bg-secondary border border-1 border-dark rounded-3 p-2 pt-0 mb-4 shadow">
