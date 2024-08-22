@@ -34,17 +34,17 @@
   <!---Video View--->
   <div id="vdView">
     <script>
-      var pos = 30;
+      var pos = 10;
       var posEnd;
       //Request
       requestVideo(apiUrl,0,pos);
       // See More
       function seeMore(){
-        if (pos < 3390) {
-          location.href = '#';
-          posEnd = pos + 30;
+        if (pos < 3410) {
+          location.href = 'vdView';
+          posEnd = pos + 10;
           requestVideo(apiUrl,pos,posEnd);
-          pos += 30;
+          pos += 10;
         }else{
           alert('This is all videos!');
         }
