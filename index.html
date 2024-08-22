@@ -19,7 +19,7 @@
     font-size: 16.5px;
   }
 </style>
-<body class="bg-dark">
+<body class="bg-dark" id="video">
   <nav class="navbar navbar-expand navbar-light bg-info mb-3 sticky-top">
     <div class="container-fluid">
       <a href="#" class="navbar-brand">Pron Web</a>
@@ -41,7 +41,7 @@
       // See More
       function seeMore(){
         if (pos < 3410) {
-          location.href = '#vdView';
+          location.href = '#video';
           posEnd = pos + 10;
           requestVideo(apiUrl,pos,posEnd);
           pos += 10;
