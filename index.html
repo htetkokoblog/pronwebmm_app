@@ -19,10 +19,10 @@
     font-size: 16.5px;
   }
 </style>
-<body class="bg-dark" id="video">
+<body class="bg-dark">
   <nav class="navbar navbar-expand navbar-light bg-info mb-3 sticky-top">
     <div class="container-fluid">
-      <a href="#" class="navbar-brand">Pron Web</a>
+      <a href="#more" class="navbar-brand">Pron Web</a>
       <ul class="navbar-nav">
         <li class="nav-item">
           <a href="https://t.me/htetkokotelegram" class="nav-link active">Contact</a>
@@ -34,24 +34,24 @@
   <!---Video View--->
   <div id="vdView">
     <script>
-      var pos = 10;
-      var posEnd;
       //Request
       requestVideo(apiUrl,0,pos);
-      // See More
-      function seeMore(){
-        if (pos < 3410) {
-          location.href = '#video';
-          posEnd = pos + 10;
-          requestVideo(apiUrl,pos,posEnd);
-          pos += 10;
-        }else{
-          alert('This is all videos!');
-        }
-      }
     </script>
   </div>
 </div>
-<dark class="bg-info text-dark text-center w-100 p-3" id="more" onclick="seeMore()">See More.....</div>
+<div class="bg-info text-dark text-center w-100 p-3" id="more" onclick="seeMore()">
+  
+  <span class="position-relative">
+  See more.....
+ <span class="badge 
+ bg-dark 
+ position-absolute 
+ top-0 
+ start-100
+ translate-middle
+ rounded-pill mx-2" id="list"></span>
+ </span>
+ </div>
+
 </body>
 </html>
