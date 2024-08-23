@@ -34,7 +34,7 @@ var posEnd;
 
 function seeMore() {
     if (pos < 3410) {
-        location.href = '#';
+        location.href = '#title';
         posEnd = pos + 10;
         requestVideo(apiUrl, pos, posEnd);
         pos += 10;
