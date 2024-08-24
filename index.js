@@ -1,3 +1,11 @@
+document.addEventListener('DOMContentLoaded', function() {
+    var videos = document.querySelectorAll('video');
+    videos.forEach(function(video) {
+        video.pause();
+    });
+});
+
+
 let drawerOpen = false;
 
 function toggleDrawer() {
