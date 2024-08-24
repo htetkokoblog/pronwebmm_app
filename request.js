@@ -16,7 +16,7 @@ function requestVideo(api, s, e) {
                 let photo = data[i].image;
                 let name = data[i].title;
                 videoView = videoView + `<div class="bg-secondary border border-1 border-dark p-2 pt-0 mb-4 shadow" id="vd">
-      <video src="${video}" controls autoplay="false" width="100%" height="250px" class="mb-0 mt-1" poster="${photo}"></video><div class="text-light  p-3  rounded m-0">${name}</div>
+      <video src="${video}" controls width="100%" height="250px" class="mb-0 mt-1" poster="${photo}"></video><div class="text-light  p-3  rounded m-0">${name}</div>
     </div>`;
                 document.getElementById('more').style.display = 'block';
             }
