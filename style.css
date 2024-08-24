@@ -63,3 +63,10 @@
   border-radius: 15px;
   box-shadow: 2px 2px 2px #000;
 }
+#hideVd p{
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16.5px;
+}
+#hideVd #seeicon{
+  font-size: 25px;
+}
