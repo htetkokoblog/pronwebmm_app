@@ -7,8 +7,7 @@ function direct(url) {
 function requestVideo(api,s,e) {
     var videoView = ''
     $.get(api)
-    .done((response) => {
-      var data = JSON.parse(response);
+    .done(function(data){
       for(i=s;i<=e;i++){
         let video = direct(data[i].link)
         let photo = data[i].image;
@@ -22,7 +21,7 @@ function requestVideo(api,s,e) {
       $('#list').text(data.length - e - 7);
       $('#vdView').html(videoView);
     })
-    .fail((xhr, status, error) =>{
+    .fail(function(xhr, status, error){
       alert('Sorry : Error404//contact us => (https://htetkoko.info)')
       console.error('Error:', error);
     });
