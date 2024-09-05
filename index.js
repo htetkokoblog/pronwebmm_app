@@ -22,7 +22,7 @@ function toggleDrawer(){
 }
 $(document).ready(function(){
   /*Video Json*/
-  const jsonFile = 'https://pronwebmm.vercel.app/data.json'
+  const jsonFile = 'https://pronwebmm.vercel.app/video.json'
   var pos = 10;
   var posEnd;
   $('#seebtn').click(function(){
