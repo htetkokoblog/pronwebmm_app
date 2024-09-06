@@ -37,7 +37,6 @@ $(document).ready(function() {
     //back
     $('#back').click(function() {
         toggleDrawer();
-        requestVideo(jsonFile, 0, 10)
     });
     //See more
     $('#more').click(function() {
