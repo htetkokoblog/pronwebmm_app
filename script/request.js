@@ -1,7 +1,7 @@
 /* Media Fire Direct Link Generate*/
 function direct(url) {
-    let link = `https://mmaoapi.vercel.app/mediafire?link=${url}`;
-    return link;
+    let link = `https://htetkoko.vercel.app/api/mediafire?url=${url}`;
+    return link.direct_link;
 }
 /* Request Video */
 function requestVideo(api, s, e) {
