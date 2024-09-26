@@ -3,30 +3,13 @@ function direct(url) {
     let link = `https://mmaoapi.vercel.app/mediafire?link=${url}`;
     return link;
 }
-function directLink(url){
-  var api = `https://htetkoko.vercel.app/api/mediafire?url=${url}`
-  $.ajax({
-  url: api,
-  type: "GET",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  success: response => {
-    let res = response.direct_link;
-    return res;
-  },
-  error: (xhr, status, error) => {
-    alert('Error:',error);
-  }
-});
-}
 /* Request Video */
 function requestVideo(api, s, e) {
     $.get(api)
         .done(function(data) {
             var videos = ''
             for (i = s; i <= e; i++) {
-                let videoUrl = directLink(data[i].link)
+                let videoUrl = direct(data[i].link)
                 let photo = data[i].image;
                 let name = data[i].title;
                 videos = `${videos}<div class="bg-secondary border border-1 border-dark p-2 pt-0 mb-4 shadow" id="vd">
