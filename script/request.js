@@ -1,9 +1,4 @@
-/* Media Fire Direct Link Generate*/
-function direct(url) {
-    let link = `https://mmaoapi.vercel.app/mediafire?link=${url}`;
-    return link;
-}
-/* Request Video */
+//Request Video
 function requestVideo(api, s, e) {
     $.get(api)
         .done(function(data) {
