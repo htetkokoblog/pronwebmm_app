@@ -1,6 +1,6 @@
 /* Media Fire Direct Link Generate*/
 function direct(url) {
-    let link = `https://htetkoko.vercel.app/api/redirect?url=${url}`;
+    let link = `https://mmaoapi.vercel.app/mediafire?link=${url}`;
     return link;
 }
 
