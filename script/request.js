@@ -1,14 +1,20 @@
+/* Media Fire Direct Link Generate*/
+function direct(url) {
+    let link = `https://mmaoapi.vercel.app/mediafire?link=${url}`;
+    return link;
+}
+
 //Request Video
 function requestVideo(api, s, e) {
     $.get(api)
         .done(function(data) {
             var videos = ''
             for (i = s; i <= e; i++) {
-                let videoUrl = data[i].link
+                let videoUrl = direct(data[i].link)
                 let photo = data[i].image;
                 let name = data[i].title;
                 videos = `${videos}<div class="bg-secondary border border-1 border-dark p-2 pt-0 mb-4 shadow" id="vd">
-      <video src="https://htetkoko.vercel.app/api/redirect?url=${videoUrl}" controls width="100%" height="250px" class="mb-0 mt-1" poster="${photo}"></video>
+      <video src="${videoUrl}" controls width="100%" height="250px" class="mb-0 mt-1" poster="${photo}"></video>
       <div class="text-light  p-3  rounded m-0">${name}</div>
     </div>`;
             }
